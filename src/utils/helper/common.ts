@@ -2,7 +2,7 @@ import forEach from 'lodash/forEach';
 import { ReadonlyURLSearchParams } from 'next/navigation';
 import { NextResponse } from 'next/server';
 
-import { TThemeColor } from '#utils/database/models/profile';
+
 
 export const fetcher = (url: string) => fetch(url).then((r) => r.json());
 export const CatchNextResponse = ({
