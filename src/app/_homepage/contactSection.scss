@@ -1,0 +1,132 @@
+.contactSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f9f9f9;
+
+  .contactDetails {
+    width: 45%;
+    max-width: 500px;
+
+    h2 {
+      width: fit-content;
+      font-size: 32px;
+      font-variation-settings: "wdth" 75, "wght" 500;
+      text-transform: uppercase;
+      user-select: none;
+      margin-bottom: 20px;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 40%;
+        height: 5px;
+        margin: 15px auto;
+        background-color: rgb(var(--colorBrandAccentRgb));
+      }
+    }
+    .address {
+      margin-bottom: 20px;
+
+      h3 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 2px 0;
+      }
+    }
+  }
+
+  .contactForm {
+    width: 50%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+
+        &:focus {
+          border-color: #000000;
+        }
+      }
+
+      button {
+        background-color: #000000;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        padding: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background-color: #000000;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 830px) {
+  .contactSection {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    .contactDetails,
+    .contactForm {
+      width: 100%;
+      max-width: 90%;
+    }
+
+    .contactDetails {
+      text-align: center;
+
+      h2::after {
+        margin: 10px auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .contactSection {
+    padding: 10px;
+  }
+
+  .contactForm {
+    padding: 20px;
+  }
+}
